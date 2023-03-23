@@ -172,7 +172,7 @@ jobs:
     # Creates a local build to run tests on
     - name: Build and Load local test-container
       if: ${{ steps.prep.outputs.goss == 'true' }}
-      uses: docker/build-push-action@a66e35b9cbcf4ad0ea91ffcaf7bbad63ad9e0229 # renovate: tag=v2
+      uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a # v2
       with:
         build-args: VERSION=${{ steps.prep.outputs.version }}
         context: .
@@ -193,7 +193,7 @@ jobs:
 
     # Push if not a PR, otherwise just test the build process for all requested platforms
     - name: Build and Push
-      uses: docker/build-push-action@a66e35b9cbcf4ad0ea91ffcaf7bbad63ad9e0229 # renovate: tag=v2
+      uses: docker/build-push-action@ac9327eae2b366085ac7f6a2d02df8aa8ead720a # v2
       with:
         build-args: VERSION=${{ steps.prep.outputs.version }}
         context: .

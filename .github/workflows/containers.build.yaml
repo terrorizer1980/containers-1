@@ -32,7 +32,7 @@ jobs:
       matrix: "{\"container\": ${{ steps.reduce.outputs.containers }} }"
     steps:
     - name: Checkout
-      uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # renovate: tag=v2
+      uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
     - uses: dorny/paths-filter@v2
       id: filter
       with:
@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout
-      uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # renovate: tag=v2
+      uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
     - name: hadolint
       uses: reviewdog/action-hadolint@1e34f93387b47709298a91edb132af6c02a4bae1 # renovate: tag=v1.27.0
       with:
@@ -75,7 +75,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[ci-skip]')"
     steps:
     - name: Checkout
-      uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # renovate: tag=v2
+      uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
 
     # Define if tests and push should be run against which versions/platforms
     - name: Prepare
